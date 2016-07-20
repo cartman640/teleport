@@ -152,7 +152,13 @@ function main {
             ;;
             
          #--- custom commands
+         start)
+            serviceStart
+            ;;
 
+         stop)
+            serviceStop
+            ;;
             
          #--- unrecognised commands
 

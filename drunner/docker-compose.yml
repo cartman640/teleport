@@ -3,10 +3,15 @@ version: '2'
 #
 services:
    teleport:
-      image: drunner/teleport
+      image: cartman640/teleport
       volumes:
-         - "config:/config"
+         - "drunner-config:/config"
       restart: always
+      ports:
+        - "3023:3023"
+        - "3024:3024"
+        - "3025:3025"
+        - "3080:3080"
       network_mode: bridge
 
 # we manage services manually in servicerunner, so there's no services
@@ -16,6 +21,6 @@ services:
 # configuraiton we should reinstate the config volume with this.
 #
 volumes:
-  config:
+  drunner-config:
      external:
         name: "drunner-${SERVICENAME}-config"

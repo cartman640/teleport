@@ -2,7 +2,7 @@
 # Configuration file for ddev.
 
 # Name of Docker Hub image we eventually build to (ignoring any branch info):
-BUILDNAME="drunner/teleport"
+BUILDNAME="cartman640/teleport"
 
 # Whether or not we're a dService:
 DSERVICE="yes"
